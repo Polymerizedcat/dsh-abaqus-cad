@@ -1,0 +1,79 @@
+{
+  "name": "dsh-abaqus-cad",
+  "version": "0.4.0",
+  "description": "Abaqus 2024+ FEA automation for dsh: detects the installed Abaqus/version first, then drives a background kernel or an existing CAE GUI with 24 MCP tools, RP coupling, revolve/tube geometry, mesh controls and a mandatory abaqus_finish close policy.",
+  "type": "module",
+  "license": "MIT",
+  "author": {
+    "name": "dsh-abaqus-cad contributors"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "mcp",
+    "abaqus",
+    "cae",
+    "fea",
+    "simulation",
+    "python",
+    "windows"
+  ],
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-mcp-client": ">=0.2.0-rc.1 <0.3.0-0"
+  },
+  "files": [
+    "lib/",
+    "mcp-server/",
+    "cae/",
+    "skills/",
+    "bin/",
+    "assets/",
+    "cordis.patch.yml",
+    "README.md",
+    "NOTICE.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "os": [
+    "win32"
+  ],
+  "displayName": "Abaqus FEA",
+  "icon": "assets/icon.svg",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Polymerizedcat/dsh-abaqus-cad.git"
+  },
+  "homepage": "https://github.com/Polymerizedcat/dsh-abaqus-cad#readme",
+  "bugs": {
+    "url": "https://github.com/Polymerizedcat/dsh-abaqus-cad/issues"
+  },
+  "bin": {
+    "dsh-abaqus-cad": "bin/dsh-abaqus-cad.mjs"
+  },
+  "scripts": {
+    "doctor": "node bin/dsh-abaqus-cad.mjs doctor",
+    "where": "node bin/dsh-abaqus-cad.mjs where"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh-mcp-client": {
+      "optional": true
+    }
+  }
+}

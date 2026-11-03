@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="12" fill="#123a63"/>
+  <path d="M10 52 L32 12 L54 52 Z" fill="none" stroke="#4fc3f7" stroke-width="3" stroke-linejoin="round"/>
+  <g stroke="#8fd6ff" stroke-width="1" opacity="0.85">
+    <path d="M17 44 H47 M21 36 H43 M25 28 H39 M29 20 H35"/>
+    <path d="M32 12 V52 M22 52 L42 32 M42 52 L22 32"/>
+  </g>
+  <circle cx="32" cy="44" r="3" fill="#ffb300"/>
+  <text x="32" y="60" font-family="Segoe UI, Arial" font-size="9" fill="#cfe9ff" text-anchor="middle">FEA</text>
+</svg>

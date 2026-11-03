@@ -1,0 +1,12 @@
+# dsh-abaqus-cad bundle patch.
+#
+# Inserts one row: this package itself. lib/index.js resolves the local Abaqus
+# installation, prepares ~/.dsh/abaqus-cad.json, installs the abaqus-fea skill,
+# and registers one stdio MCP server (serverName: abaqus).
+#
+# The server advertises only search_tools + call_tool, so the full 21-tool
+# catalogue does not sit in the context window.
+
+- insert:
+    - id: dsh-abaqus-cad
+      name: 'dsh-abaqus-cad'

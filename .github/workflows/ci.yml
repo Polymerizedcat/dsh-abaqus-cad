@@ -1,0 +1,24 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: JavaScript syntax
+        run: |
+          for f in lib/*.js lib/*.mjs bin/*.mjs; do node --check "$f"; done
+      - name: package.json
+        run: node -e "JSON.parse(require('fs').readFileSync('package.json','utf8')); console.log('ok')"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Python syntax
+        run: python -m py_compile mcp-server/*.py cae/*.py
