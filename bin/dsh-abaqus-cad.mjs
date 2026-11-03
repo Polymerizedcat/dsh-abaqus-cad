@@ -26,7 +26,7 @@ function printDoctor(asJson) {
     console.log(`Command      : ${d.command || "?"}`);
     console.log(`Install root : ${d.installRoot || "?"}`);
     console.log(`Python       : ${d.python ? `${d.python.version} (${d.python.path})` : "?"}`);
-    console.log(`Solver       : ${d.solver ? "present" : "MISSING (CAE-only install)"}`);
+    console.log(`Solver       : ${d.solver === null ? "unknown (custom install path)" : d.solver ? "present" : "MISSING (CAE-only install)"}`);
     if (d.installations.length) {
       console.log(
         `Installations: ${d.installations

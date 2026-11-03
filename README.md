@@ -86,7 +86,8 @@ Installations: 2024
 plugin_manager install_bundle target=github:Polymerizedcat/dsh-abaqus-cad
 ```
 
-仓库根目录即本包（`package.json` 在根）。
+仓库根目录即本包（`package.json` 在根）。如果当前 dsh 的
+`plugin_manager` 不接受 `github:` spec，先 `git clone` 再按方式 C 指向本地目录。
 
 ### 方式 B：npm 包名
 

@@ -167,7 +167,7 @@ def detect_abaqus(cfg=None, force=False):
             "Abaqus not found" if not (cmd or installs)
             else "Abaqus %s is older than %s" % (version, min_version)),
         "python": python,
-        "solver": bool(install and install["solver"]),
+        "solver": (bool(install["solver"]) if install else None),
         "installRoot": install["root"] if install else None,
         "installations": [{"version": i["version"], "solver": i["solver"]} for i in installs],
         "rawOutput": text[-4000:],
