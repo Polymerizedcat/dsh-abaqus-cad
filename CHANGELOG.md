@@ -5,7 +5,7 @@
 - Detect the installed Abaqus and its version before loading; require 2024+.
 - Add `bin/dsh-abaqus-cad.mjs doctor` (version/Python/solver/installs) and the
   `ABAQUS_MIN_VERSION` / `ABAQUS_ALLOW_UNSUPPORTED` controls.
-- Package for npm and `github:OWNER/dsh-abaqus-cad` installs: `bin`, repository,
+- Package for npm and `github:Polymerizedcat/dsh-abaqus-cad` installs: `bin`, repository,
   publish metadata, CI, NOTICE.
 - README rewritten as the GitHub landing page.
 
