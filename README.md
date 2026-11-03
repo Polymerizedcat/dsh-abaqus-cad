@@ -1,7 +1,7 @@
 # dsh-abaqus-cad
 
 把 **Abaqus/CAE 2024+** 接到 [DeepSeek Harness](https://github.com/deepseek-ai)（dsh）/
-Codex：安装时先检测本机 Abaqus 及其版本，再用 **24 个 MCP 工具**完成
+Codex：首次加载 / `doctor` 先检测本机 Abaqus 及其版本，再用 **24 个 MCP 工具**完成
 “建模 → 网格 → 分析 → 求解 → 后处理”，既可以跑独立后台内核，也可以直接驱动
 你已经打开的 CAE GUI。
 
@@ -57,6 +57,8 @@ abaqus information=versions
 ```powershell
 # 已发布到 npm 后
 npx dsh-abaqus-cad doctor
+# 未发布时可直接从 GitHub 运行
+npx -y github:Polymerizedcat/dsh-abaqus-cad doctor
 
 # 或从仓库/本地目录
 node bin/dsh-abaqus-cad.mjs doctor
@@ -88,7 +90,7 @@ plugin_manager install_bundle target=github:Polymerizedcat/dsh-abaqus-cad
 
 ### 方式 B：npm 包名
 
-包发布到 npm 后：
+包发布到 npm 后（若 `dsh-abaqus-cad` 名称被占用，改用 GitHub 方式）：
 
 ```text
 plugin_manager install_bundle target=dsh-abaqus-cad
